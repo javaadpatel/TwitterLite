@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Twitter Lite</h1>
+    <p>It's like twitter but actually much worse</p>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+
+            $.get("/Home/FetchTwitterFeed", function (data) {
+                console.log("Fetched Feed");
+                //console.log(data);
+                data.map((d) => console.log(d));
+            });
+        })
+    </script>
+}

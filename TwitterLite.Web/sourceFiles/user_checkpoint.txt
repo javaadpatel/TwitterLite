@@ -1,0 +1,4 @@
+Kent follows Vitalik
+Michael follows Kent,Veronica,Vitalik
+Veronica follows Michael,Vitalik
+Vitalik follows Veronica

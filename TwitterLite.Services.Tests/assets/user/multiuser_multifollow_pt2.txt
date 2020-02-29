@@ -1,0 +1,7 @@
+Michael follows Kent, Veronica
+Kent follows Vitalik
+Michael follows Vitalik, Kent
+Veronica follows Michael, Vitalik
+Vitalik follows Veronica
+Michael follows Javaad
+Javaad follows Kent, Veronica, Michael,Vitalik

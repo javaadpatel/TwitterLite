@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{5813E01D-26E3-4366-9BED-00DD5D01A92A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitterLite.Common", "TwitterLite.Common\TwitterLite.Common.csproj", "{83594BD5-7E82-4D85-B465-1B8FEBC58C3F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitterLite.Contracts", "TwitterLite.Contracts\TwitterLite.Contracts.csproj", "{F29CF369-45DC-4243-A2F2-DA60D94EE19D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FB919DDF-0DCE-4630-8A00-B535500FE9D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{907B45CC-B2FD-44D9-9887-9737BAACB049}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitterLite.Services.Tests", "TwitterLite.Services.Tests\TwitterLite.Services.Tests.csproj", "{42151586-8EF8-4E32-AA28-9451DBE83EC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Artifacts", "Artifacts", "{16CAB25C-DA97-42BE-AEF0-C49DCA332AE0}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitterLite.Services", "TwitterLite.Services\TwitterLite.Services.csproj", "{E4CBADC6-217D-413E-B3C0-DED9243C0D22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterLite.Web", "TwitterLite.Web\TwitterLite.Web.csproj", "{E66C94D8-2301-47BD-9D91-D3E8ECE3A464}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83594BD5-7E82-4D85-B465-1B8FEBC58C3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83594BD5-7E82-4D85-B465-1B8FEBC58C3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83594BD5-7E82-4D85-B465-1B8FEBC58C3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83594BD5-7E82-4D85-B465-1B8FEBC58C3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F29CF369-45DC-4243-A2F2-DA60D94EE19D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F29CF369-45DC-4243-A2F2-DA60D94EE19D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F29CF369-45DC-4243-A2F2-DA60D94EE19D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F29CF369-45DC-4243-A2F2-DA60D94EE19D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42151586-8EF8-4E32-AA28-9451DBE83EC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42151586-8EF8-4E32-AA28-9451DBE83EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42151586-8EF8-4E32-AA28-9451DBE83EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42151586-8EF8-4E32-AA28-9451DBE83EC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4CBADC6-217D-413E-B3C0-DED9243C0D22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4CBADC6-217D-413E-B3C0-DED9243C0D22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4CBADC6-217D-413E-B3C0-DED9243C0D22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4CBADC6-217D-413E-B3C0-DED9243C0D22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E66C94D8-2301-47BD-9D91-D3E8ECE3A464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E66C94D8-2301-47BD-9D91-D3E8ECE3A464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E66C94D8-2301-47BD-9D91-D3E8ECE3A464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E66C94D8-2301-47BD-9D91-D3E8ECE3A464}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{83594BD5-7E82-4D85-B465-1B8FEBC58C3F} = {5813E01D-26E3-4366-9BED-00DD5D01A92A}
+		{F29CF369-45DC-4243-A2F2-DA60D94EE19D} = {5813E01D-26E3-4366-9BED-00DD5D01A92A}
+		{907B45CC-B2FD-44D9-9887-9737BAACB049} = {FB919DDF-0DCE-4630-8A00-B535500FE9D4}
+		{42151586-8EF8-4E32-AA28-9451DBE83EC4} = {907B45CC-B2FD-44D9-9887-9737BAACB049}
+		{E4CBADC6-217D-413E-B3C0-DED9243C0D22} = {5813E01D-26E3-4366-9BED-00DD5D01A92A}
+		{E66C94D8-2301-47BD-9D91-D3E8ECE3A464} = {16CAB25C-DA97-42BE-AEF0-C49DCA332AE0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85CB3BE3-A751-4C28-B974-E9F4AE5168EC}
+	EndGlobalSection
+EndGlobal

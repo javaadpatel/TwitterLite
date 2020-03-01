@@ -8,7 +8,6 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
 WORKDIR /src
 COPY ["TwitterLite.Web/TwitterLite.Web.csproj", "TwitterLite.Web/"]
-#COPY ["TwitterLite.Web.csproj", "TwitterLite.Web/"]
 RUN dotnet restore "TwitterLite.Web/TwitterLite.Web.csproj"
 COPY . .
 WORKDIR "/src/TwitterLite.Web"

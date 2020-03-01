@@ -1,0 +1,9 @@
+version: "3"
+services:
+  twitterlite:
+    restart: always
+    build: .
+    ports:
+      - "4001:80"
+    environment:
+      - AzureBlobStorageConnectionString=ConnectionString

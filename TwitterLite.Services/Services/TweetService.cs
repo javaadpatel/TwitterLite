@@ -9,6 +9,7 @@ namespace TwitterLite.Services.Services
     public class TweetService : ITweetService
     {
         private readonly string _tweetStartCharacter = ">";
+        private readonly int _tweetCharacterLimit = 280;
 
         /// <summary>Processes the tweet file and sends all tweets</summary>
         /// <param name="fileName">Name of the file.</param>
@@ -93,7 +94,15 @@ namespace TwitterLite.Services.Services
             //producing a string array with [0] = userName & [1] = tweet
             var lineParts = line.Split(_tweetStartCharacter);
 
-            return new Tweet(lineParts[0].Trim(), lineParts[1].Trim());
+            var author = lineParts[0].Trim();
+            var message = lineParts[1].Trim();
+
+            //ensure that tweet is below the maximum character limit
+            if (message.Length > _tweetCharacterLimit)
+                throw new ArgumentException($"Could not process tweet, tweet greater than maximum characters allowed" +
+                    $"Line with error: {line}");
+
+            return new Tweet(author, message);
         }
     }
 }

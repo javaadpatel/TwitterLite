@@ -41,6 +41,9 @@
             $.get("/Home/FetchTwitterFeed", function (data) {
                 console.log("--- Fetched Feed ---");
                 data.map((d) => console.log(d));
+            }).fail(function (e) {
+                console.log("error occurred");
+                console.log(e);
             });
 
             $("#upload-widget").dropzone({
@@ -54,6 +57,7 @@
                     this.on("sending", function (file, xhr, formData) {
                         formData.append("appendedFile", fileOptions())
                     })
+                    this.on("error", function (err, message) { console.log(`Error uploading: ${err.name}`); });
                 }
             });
         })

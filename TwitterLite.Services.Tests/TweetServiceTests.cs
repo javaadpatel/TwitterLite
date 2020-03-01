@@ -215,6 +215,15 @@ namespace TwitterLite.Services.Tests
             var line = "Vitalik Things like tornado cash and uniswap, kyber";
             Assert.That(() => _sut.ProcessTweet(line), Throws.Exception.TypeOf<ArgumentException>());
         }
+
+        [Test]
+        public void ProcessTweet_TweetExceedsMaximumLength_Should_ThrowException()
+        {
+            var line = "Vitalik> Things like tornado cash and uniswap, kyber tornado tornado tornado tornado tornado tornado tornado tornado tornado tornado" +
+                "Things like tornado cash and uniswap, kyber tornado tornado tornado tornado tornado tornado tornado tornado tornado tornado" +
+                "Things like tornado cash and uniswap, kyber tornado tornado tornado tornado tornado tornado tornado tornado tornado tornado";
+            Assert.That(() => _sut.ProcessTweet(line), Throws.Exception.TypeOf<ArgumentException>());
+        }
         #endregion
 
     }

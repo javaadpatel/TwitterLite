@@ -12,5 +12,9 @@ namespace TwitterLite.Contracts.Services
         /// <param name="useCheckpoint">Flag to set whether a checkpoint file and metadata should be created</param>
         /// <returns></returns>
         SortedDictionary<string, User> BuildandRegisterUsers(string fileName, bool useCheckpoint = false);
+
+
+        /// <summary>Deletes the checkpoint files.</summary>
+        void DeleteCheckpointFiles();
     }
 }

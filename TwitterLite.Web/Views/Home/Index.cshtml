@@ -4,17 +4,57 @@
 
 <div class="text-center">
     <h1 class="display-4">Twitter Lite</h1>
-    <p>It's like twitter but actually much worse</p>
+    <p>Static file generated timelines</p>
+
+    <div style="margin-bottom: 20px">
+        <input id="fileOptionToggle" class="btn btn-success" type="checkbox" checked data-toggle="toggle" 
+               data-on="Appended file" data-off="Completely new file"
+               data-onstyle="success" data-offstyle="danger">
+    </div>
+
+
+    <form id="upload-widget" class="dropzone" 
+          asp-controller="Home"
+          asp-action="UploadAsset"
+    >
+        <div class="dz-message d-flex flex-column">
+            <i class="fa fa-cloud-upload"></i>
+            Drag &amp; Drop here or click to upload user.txt and tweet.txt files
+        </div>
+    </form>
 </div>
 
 @section Scripts{
     <script>
-        $(document).ready(function () {
+        Dropzone.autoDiscover = false;
 
+        /*workaround to ensure dropzone.js maps the files property argument*/
+        function myParamName() {
+            return "files";
+        }
+
+        function fileOptions() {
+            return $("#fileOptionToggle").prop("checked");
+        }
+
+        $(document).ready(function () {
             $.get("/Home/FetchTwitterFeed", function (data) {
-                console.log("Fetched Feed");
-                //console.log(data);
+                console.log("--- Fetched Feed ---");
                 data.map((d) => console.log(d));
+            });
+
+            $("#upload-widget").dropzone({
+                paramName: myParamName, // The name that will be used to transfer the file
+                maxFilesize: 10, //maximum file size in MB
+                uploadMultiple: true,
+                createImageThumbnails: false,
+                timeout: 30000, /*milliseconds*/
+                init: function () {
+                    this.on("success", function (file, serverResponse) { console.log("Uploaded successfully") })
+                    this.on("sending", function (file, xhr, formData) {
+                        formData.append("appendedFile", fileOptions())
+                    })
+                }
             });
         })
     </script>

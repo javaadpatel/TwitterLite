@@ -338,3 +338,10 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+# Ignore downloaded files
+TwitterLite.Web/downloadedFiles/*
+
+# Ignore checkpoint files
+TwitterLite.Web/sourceFiles/user_checkpoint.txt
+TwitterLite.Web/sourceFiles/user_metadata.txt

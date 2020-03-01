@@ -36,6 +36,7 @@ namespace TwitterLite.Web
             //register services
             services.AddSingleton<IUserService, UserService>();
             services.AddSingleton<ITweetService, TweetService>();
+            services.AddSingleton<IBlobRepository, BlobRepositoryBase>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

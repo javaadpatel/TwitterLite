@@ -16,7 +16,7 @@ namespace TwitterLite.Services.Services
         protected string _storageConnectionString;
         protected string containerName = "sourcefiles";
         private readonly ILogger<IBlobRepository> _logger;
-        private string _path = Directory.GetCurrentDirectory() + "\\downloadedFiles\\";
+        private string _path = Directory.GetCurrentDirectory();// + "\\downloadedFiles\\";
 
         protected CloudStorageAccount cloudStorageAccount;
         public CloudStorageAccount CloudStorageAccount

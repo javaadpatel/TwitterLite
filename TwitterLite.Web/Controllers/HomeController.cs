@@ -17,7 +17,7 @@ namespace TwitterLite.Web.Controllers
         private readonly ITweetService _tweetService;
         private readonly IConfiguration _configuration;
         private readonly IBlobRepository _blobRepository;
-        private readonly string _path = Directory.GetCurrentDirectory() + "\\downloadedFiles\\";
+        private readonly string _path = Directory.GetCurrentDirectory();// + "//downloadedFiles//";
         private readonly string _userFilePath;
         private readonly string _tweetFilePath;
         private List<string> twitterFeed = null;

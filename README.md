@@ -1,4 +1,6 @@
 # TwitterLite
+![Build pipeline status](https://dev.azure.com/jbirdcode/TwitterLite/_apis/build/status/TwitterLite-Docker%20container-CI?branchName=master)
+
 
 ## [Demo Here](https://twitterlite.azurewebsites.net/)
 

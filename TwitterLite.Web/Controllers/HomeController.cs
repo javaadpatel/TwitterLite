@@ -48,17 +48,25 @@ namespace TwitterLite.Web.Controllers
         [HttpGet]
         public List<string> FetchTwitterFeed()
         {
-            if(!System.IO.File.Exists(_userFilePath))
-                return new List<string> { "Error: user.txt does not exist please upload" };
+            try
+            {
+                if (!System.IO.File.Exists(_userFilePath))
+                    return new List<string> { "Error: user.txt does not exist please upload" };
 
-            if (!System.IO.File.Exists(_tweetFilePath)) 
-                return new List<string> { "Error: tweet.txt does not exist please upload" };
+                if (!System.IO.File.Exists(_tweetFilePath))
+                    return new List<string> { "Error: tweet.txt does not exist please upload" };
 
-            var userDictionary = _userService.BuildandRegisterUsers(_userFilePath, true);
-            _tweetService.BuildTwitterFeed(_tweetFilePath, userDictionary);
+                var userDictionary = _userService.BuildandRegisterUsers(_userFilePath, true);
+                _tweetService.BuildTwitterFeed(_tweetFilePath, userDictionary);
 
-            twitterFeed = _tweetService.RenderAllTwitterFeeds(userDictionary);
-            return twitterFeed;
+                twitterFeed = _tweetService.RenderAllTwitterFeeds(userDictionary);
+                return twitterFeed;
+            }
+            catch (Exception ex)
+            {
+                return new List<string> { $"Error! {ex.Message}" };
+            }
+
         }
 
         [HttpPost("UploadAsset")]
@@ -77,11 +85,6 @@ namespace TwitterLite.Web.Controllers
                 //save copy locally
                 await _blobRepository.DownloadBlobAsFileAsync(file.FileName);
             }
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -16,8 +16,7 @@ namespace TwitterLite.Services.Services
         public readonly string _userCheckpointFileName = "user_checkpoint.txt";
         public readonly string _userCheckpointMetadataFileName = "user_metadata.txt";
 
-        //private string _path = Directory.GetCurrentDirectory() + "\\assets\\user\\";
-        private string _path = Directory.GetCurrentDirectory() + "\\sourceFiles\\";
+        private string _path = Directory.GetCurrentDirectory() + "\\downloadedFiles\\";
 
         public string Path
         {
@@ -226,6 +225,22 @@ namespace TwitterLite.Services.Services
             }
 
             return true;
+        }
+
+        /// <summary>Deletes the checkpoint files.</summary>
+        public void DeleteCheckpointFiles()
+        {
+            string checkPointFilePath = $"{Path}/{_userCheckpointFileName}";
+            string metadataFilePath = $"{Path}/{_userCheckpointMetadataFileName}";
+            List<string> files = new List<string> { checkPointFilePath, metadataFilePath };
+
+            foreach (var file in files)
+            {
+                if (File.Exists(file))
+                {
+                    File.Delete(file);
+                }
+            }
         }
 
         public string ComputeFileHash(string fileName)

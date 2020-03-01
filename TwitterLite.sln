@@ -17,12 +17,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitterLite.Services.Tests"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Artifacts", "Artifacts", "{16CAB25C-DA97-42BE-AEF0-C49DCA332AE0}"
 	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		TwitterLite.Web\Dockerfile = TwitterLite.Web\Dockerfile
 		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitterLite.Services", "TwitterLite.Services\TwitterLite.Services.csproj", "{E4CBADC6-217D-413E-B3C0-DED9243C0D22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterLite.Web", "TwitterLite.Web\TwitterLite.Web.csproj", "{E66C94D8-2301-47BD-9D91-D3E8ECE3A464}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitterLite.Web", "TwitterLite.Web\TwitterLite.Web.csproj", "{E66C94D8-2301-47BD-9D91-D3E8ECE3A464}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

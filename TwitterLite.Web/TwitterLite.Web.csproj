@@ -21,4 +21,10 @@
     <ProjectReference Include="..\TwitterLite.Services\TwitterLite.Services.csproj" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="downloadedFiles\" />
+    <Folder Include="sourceFiles\" />
+  </ItemGroup>
+
 </Project>

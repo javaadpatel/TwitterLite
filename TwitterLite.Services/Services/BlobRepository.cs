@@ -63,7 +63,7 @@ namespace TwitterLite.Services.Services
 
         public BlobRepositoryBase(IConfiguration _configuration, ILogger<IBlobRepository> logger)
         {
-            _storageConnectionString = _configuration["AzureBlobStorage:ConnectionString"];
+            _storageConnectionString = _configuration["AzureBlobStorageConnectionString"];
             _logger = logger;
         }
 
